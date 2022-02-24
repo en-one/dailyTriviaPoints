@@ -29,5 +29,27 @@
 >    return zeroTime.Unix(), nil
 > }
 > ```
->
+
+
+- 当需要的入参为duration，且需要传入变量int
+
+> ```Go
+> time.NewTicker(time.Duration(reportStatusperiod) * time.Second)
 > 
+> ```
+
+- time与字符串的转化
+
+> ```Go
+> now := time.Now()
+> formatNow := now.Format("2006-01-02 15:04:05")
+> fmt.Println(formatNow)
+> 
+> local, _ := time.LoadLocation("Local")
+> t, _ := time.ParseInLocation("2006-01-02 15:04:05", "2017-06-20 18:16:15", local)
+> fmt.Println(t)
+> ```
+
+
+
+
