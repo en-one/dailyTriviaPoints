@@ -59,9 +59,9 @@ API网址：每个网址代表一种资源，所以网址中不能有动词，�
 常用动词
 
 > - GET（SELECT）：从服务器取出资源（一项或多项）。
-> - POST（CREATE）：在服务器新建一个资源。
-> - PUT（UPDATE）：在服务器更新资源（客户端提供改变后的完整资源）。
-> - PATCH（UPDATE）：在服务器更新资源（客户端提供改变的属性）。
+> - POST（CREATE）：在服务器新建一个资源。名词化动作执行
+> - PUT（UPDATE）：修改实体资源的全属性
+> - PATCH（UPDATE）：修改实体资源的部分属性
 > - DELETE（DELETE）：从服务器删除资源。
 
 举例：
@@ -91,7 +91,11 @@ API网址：每个网址代表一种资源，所以网址中不能有动词，�
 
 参数的设计允许存在冗余，即允许API路径和URL参数偶尔有重复。比如，GET /zoo/ID/animals 与 GET /animals?zoo_id=ID 的含义是相同的。
 
+## 七、项目示例
 
+1. url里面都用名词，由context-path和url组成
+2. context-path用版本/服务名格式, 如v1/usermanager
+3. url表示的是实体资源，如用户，或者动作的名词化
 
 ---
 
